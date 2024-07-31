@@ -1,5 +1,6 @@
 from math_operations import add, substract, multiply
 import pytest
+import numpy as np
 
 
 def test_add():
@@ -22,3 +23,10 @@ def test_substract():
 def test_multiply():
     assert multiply(3, 5) == 15
     assert multiply(-1, -1) == 1
+
+@pytest.mark.parametrize("numbers, expected", [([10,20,30],20),
+                                               ([1.5,2.5,3.5], 2.5)])
+
+def test_mean(numbers, expected):
+    if numbers:
+        assert np.mean(numbers) == expected
