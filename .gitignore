@@ -1,1 +1,6 @@
 env/
+__pycache__
+100_gather_data.py
+200_analysis.py
+300_results.py
+
